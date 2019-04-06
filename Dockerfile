@@ -26,11 +26,11 @@ RUN git checkout f30
 WORKDIR /srv/build-repo
 RUN ostree --repo=/srv/build-repo init --mode=bare-user
 
-RUN rpm-ostree compose tree --cachedir=/srv/cache --repo=/srv/build-repo /srv/workstation-ostree-config/fedora-silverblue.yaml 
-#RUN rpm-ostree compose tree  --cachedir=/srv/cache  --repo=/srv/repo fedora-atomic-host-base.json
+WORKDIR /srv/workstation-ostree-config
+#RUN rpm-ostree compose tree --cachedir=/srv/cache --repo=/srv/build-repo /srv/workstation-ostree-config/fedora-silverblue.yaml 
 
 # Pull repo once commit is done
-RUN ostree --repo=repo pull-local build-repo centos-atomic-host/7/x86_64/standard
+#RUN ostree --repo=/srv/repo pull-local build-repo centos-atomic-host/7/x86_64/standard
 
 # Expose default SimpleHTTPServer port and start SimpleHTTPServer
 EXPOSE 8000
