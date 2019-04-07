@@ -27,8 +27,9 @@ Send issue if you use/fork/ameliorate/have similar to let me know.
 Fedora may use the name Silverblaze if they wish to promote an optimized version of Silverblue.
 
 ## Rebase a silverblue to custom ostree
-sudo ostree remote add fedora-silverblaze http://192.168.122.143:8000/repo --no-gpg-verify
+sudo ostree remote add fedora-silverblaze http://192.168.122.143:8000/ --no-gpg-verify
 sudo rpm-ostree rebase fedora-silverblaze:fedora/30/x86_64/silverblue
+sudo systemctl reboot
 
 ## Create an ISO
 http://www.projectatomic.io/docs/fedora_atomic_bare_metal_installation/

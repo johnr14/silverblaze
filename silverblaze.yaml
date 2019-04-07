@@ -24,6 +24,25 @@ packages:
   # Contains default ostree remote config to be used on client's
   # system for fetching ostree update
   - fedora-repos-ostree
+  # CUSTOM ADDITIONS
+  - htop
+  - tmux
+  - dfc
+  - screen
+  - xclip
+  - net-tools
+  - tuptime
+  - neofetch
+  - lsof
+  - expect
+  - colordiff
+  - git
+  - etckeeper
+  - dar
+  - p7zip-full
+  - curl
+  - aria2
+ 
  
 repos:
   - fedora-30

@@ -14,7 +14,7 @@ cd /srv/workstation-ostree-config
 # Compose the tree with :
 rpm-ostree compose tree --cachedir=/srv/cache --repo=/srv/build-repo /srv/workstation-ostree-config/fedora-silverblue.yaml 
 # Pull repo once commit is done
-ostree --repo=/srv/repo pull-local build-repo ostree --repo=/srv/repo pull-local /srv/build-repo fedora/30/x86_64/silverblue
+ostree --repo=/srv/repo pull-local /srv/build-repo fedora/30/x86_64/silverblue
 
 # Try it on a running sliverblue ??
 "
