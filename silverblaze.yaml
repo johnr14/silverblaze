@@ -42,6 +42,8 @@ packages:
   - p7zip-full
   - curl
   - aria2
+  - guake
+  - terminator
  
  
 repos:

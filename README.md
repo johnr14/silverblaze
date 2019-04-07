@@ -2,8 +2,10 @@
 The objectif is to generate a ostree image of a custom silverblue installation.
 Silverblaze is to be a Fedora OS based on a immutable ostree root that will try out bleeding edge packages and agressive optimization. If it crash or makes problems, just revert to a regular ostree.
 
+Ideology :
 A) Bundle all usefull console and window manager application in the ostree.
 B) Use flatpack for any optional GUI application.
+C) Sync a /var/home on cloud to syncronyse all computers/VMs
 
 
 1) Generate a bootable silverblue ostree.
