@@ -33,5 +33,6 @@ WORKDIR /srv/workstation-ostree-config
 #RUN ostree --repo=/srv/repo pull-local build-repo centos-atomic-host/7/x86_64/standard
 
 # Expose default SimpleHTTPServer port and start SimpleHTTPServer
+WORKDIR /srv/repo
 EXPOSE 8000
 CMD python -m SimpleHTTPServer
