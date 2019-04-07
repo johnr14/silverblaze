@@ -1,9 +1,8 @@
-	
 include: gnome-desktop-pkgs.json
-ref: fedora/30/${basearch}/silverblue
+ref: fedora/30/${basearch}/silverblaze
 rojig:
   name: fedora-silverblue
-  summary: "Fedora Silverblue base image"
+  summary: "Fedora Silverblaze custom image"
   license: MIT
 packages:
   - desktop-backgrounds-gnome
@@ -27,11 +26,9 @@ packages:
   # CUSTOM ADDITIONS
   - htop
   - tmux
-  - dfc
   - screen
   - xclip
   - net-tools
-  - tuptime
   - neofetch
   - lsof
   - expect
@@ -39,11 +36,12 @@ packages:
   - git
   - etckeeper
   - dar
-  - p7zip-full
+  - p7zip
   - curl
   - aria2
   - guake
   - terminator
+  - wget
  
  
 repos:
