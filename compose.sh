@@ -19,7 +19,7 @@ rpm-ostree compose tree --cachedir=/srv/cache --repo=/srv/build-repo /srv/workst
 ostree --repo=/srv/repo pull-local /srv/build-repo fedora/30/x86_64/silverblue
 
 # A custom silverblaze ostree :
-curl https://raw.githubusercontent.com/johnr14/silverblaze/master/silverblaze.yaml > fedora-silverblaze.yaml
+curl https://raw.githubusercontent.com/johnr14/silverblaze/master/fedora-silverblaze.yaml > fedora-silverblaze.yaml
 rpm-ostree compose tree --cachedir=/srv/cache --repo=/srv/build-repo /srv/workstation-ostree-config/fedora-silverblaze.yaml
 ostree --repo=/srv/repo pull-local /srv/build-repo fedora/30/x86_64/silverblaze
 
