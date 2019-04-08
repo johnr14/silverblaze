@@ -42,7 +42,8 @@ packages:
   - guake
   - terminator
   - wget
- 
+  - gnome-software-rpm-ostree
+  - langpacks-en
  
 repos:
   - fedora-30
