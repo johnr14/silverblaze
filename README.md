@@ -39,6 +39,20 @@ sudo ostree remote add fedora-silverblaze http://192.168.122.143:8000/ --no-gpg-
 sudo rpm-ostree rebase fedora-silverblaze:fedora/30/x86_64/silverblue
 sudo systemctl reboot
 
+## ZFS
+Pull ZFS
+
+cd /srv
+mkdir packages && cd packages
+git clone https://github.com/zfsonlinux/zfs.git
+
+#INSTALL DEPENDANCIES
+sudo dnf groupinstall "C Development Tools and Libraries"
+sudo dnf install zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel
+sudo dnf install parted lsscsi ksh openssl-devel elfutils-libelf-devel libtirpc-devel
+sudo dnf install kernel-devel-$(uname -r)
+
+
 ## Create an ISO
 http://www.projectatomic.io/docs/fedora_atomic_bare_metal_installation/
 
