@@ -1,6 +1,7 @@
 #!/bin/bash
-# FIX THIS
-#sudo dnf install docker
+# Must have run these on a new install
+#sudo dnf install -y docker git
+#sudo 
 #sudo systemctl start docker
 #sudo systemctl enable docker
 
