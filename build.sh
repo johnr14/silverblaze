@@ -5,7 +5,7 @@
 #sudo systemctl start docker
 #sudo systemctl enable docker
 
-e#cho "Will build the whole thing, it may take a long time as well as ~10GB space"
+echo "Will build the whole thing, it may take a long time as well as ~10GB space"
 
 #sudo docker build --rm -t $USER/silverblazerepo .
 #sudo docker run --privileged -d -p 8000:8000 --name silverblazerepo $USER/silverblazerepo
@@ -55,6 +55,16 @@ cp *.rpm /srv/local-repo
 #RUN git clone https://evilpiepirate.org/git/bcachefs-tools.git
 #RUN dnf install libzstd-devel libzstd lz4-devel lz4-libs libsodium-devel libsodium userspace-rcu userspace-rcu-devel libaio libaio-devel libscrypt-devel libscrypt bc
 
+echo "Creating or updating local-repo"
+createrepo /srv/local-repo/
+
+# ADD TEST IF ZFS IS INCLUDED
+dnf clean all
+dnf search zfs --refresh
+#dnf update -y # Update to be sure that no packaged changed while building this (it happened once ! and it was kernel, need to rebuild it since ostree will fetch non-matching kernel with zfs ...)
+
+# TODO 
+# Make it so that installation kernel match zfs kernel...
 
 echo "entering in workstation-ostree-config for rpm-ostree compose
 cd /srv/workstation-ostree-config

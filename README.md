@@ -32,7 +32,8 @@ Fedora may use the name Silverblaze if they wish to promote an optimized version
 
 # NOTES
 I have errors building the ostree in a container as it tries to look for systemd and pid 1 is the python simplehttpd.
-
+Also rpm database gets often corrupted for no reason while running in docker...
+I will run it in a VM and try if I have better chances.
 
 ## Rebase a silverblue to custom ostree
 sudo ostree remote add fedora-silverblaze http://192.168.122.143:8000/ --no-gpg-verify
