@@ -3,6 +3,8 @@
 The objectif is to generate a ostree image of a custom silverblue installation.
 Silverblaze is to be a Fedora OS based on a immutable ostree root that will try out bleeding edge packages and agressive optimization. If it crash or makes problems, just revert to a regular ostree.
 
+NOTE : NOT FUNCTIONNAL FOR NOW, JUST AN ATTEMPT !!
+
 ##Ideology :
 A) Bundle all usefull console and window manager application in the ostree.
 B) Use flatpack for any optional GUI application.
@@ -34,6 +36,9 @@ Fedora may use the name Silverblaze if they wish to promote an optimized version
 I have errors building the ostree in a container as it tries to look for systemd and pid 1 is the python simplehttpd.
 Also rpm database gets often corrupted for no reason while running in docker...
 I will run it in a VM and try if I have better chances.
+
+### Tips
+alias dnf="podman run --rm -it registry.fedoraproject.org/fedora:29 dnf $@"
 
 ## Rebase a silverblue to custom ostree
 sudo ostree remote add fedora-silverblaze http://192.168.122.143:8000/ --no-gpg-verify
