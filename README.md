@@ -9,6 +9,7 @@ NOTE : NOT FUNCTIONNAL FOR NOW, JUST AN ATTEMPT !!
 A) Bundle all usefull console and window manager application in the ostree.
 B) Use flatpack for any optional GUI application.
 C) Sync a /var/home on cloud to syncronyse all computers/VMs
+D) Can be run localy on a silverblue instance 
 
 ## Steps
 1) Generate a bootable silverblue ostree.
