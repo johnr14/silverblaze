@@ -1,7 +1,7 @@
 FROM fedora:30
 
 # make sure we have fast downloads
-RUN echo "fastestmirror=true" >> /etc/dnf/dnf.conf
+RUN echo "fastestmirror=true" >> /etc/dnf/dnf.conf && dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
 
 # Update, install specified packages and clean cached information
 RUN dnf update -y && dnf install -y git python rpm-ostree ostree-grub2 ostree zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel parted lsscsi ksh openssl-devel elfutils-libelf-devel libtirpc-devel kernel-devel-$(uname -r) fedora-packager fedora-review libffi-devel python3-devel libaio-devel; dnf groupinstall "C Development Tools and Libraries" -y; dnf clean all
