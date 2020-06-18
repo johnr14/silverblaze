@@ -34,7 +34,7 @@ Send issue if you use/fork/ameliorate/have similar to let me know.
 Fedora may use the name Silverblaze if they wish to promote an optimized version of Silverblue.
 
 # Steps
-podman build ./ 
+podman build ./ -t=sliverblazebuild
 
 
 # NOTES
