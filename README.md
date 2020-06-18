@@ -33,13 +33,17 @@ This is a personal project and may not come to be completed soon.
 Send issue if you use/fork/ameliorate/have similar to let me know.
 Fedora may use the name Silverblaze if they wish to promote an optimized version of Silverblue.
 
+# Steps
+podman build ./ 
+
+
 # NOTES
 I have errors building the ostree in a container as it tries to look for systemd and pid 1 is the python simplehttpd.
 Also rpm database gets often corrupted for no reason while running in docker...
 I will run it in a VM and try if I have better chances.
 
 ### Tips
-alias dnf="podman run --rm -it registry.fedoraproject.org/fedora:29 dnf $@"
+alias dnf="podman run --rm -it registry.fedoraproject.org/fedora:$(rpm -E %fedora) dnf $@"
 
 ## Rebase a silverblue to custom ostree
 sudo ostree remote add fedora-silverblaze http://192.168.122.143:8000/ --no-gpg-verify
@@ -53,7 +57,7 @@ cd /srv
 mkdir packages && cd packages
 git clone https://github.com/zfsonlinux/zfs.git
 
-#INSTALL DEPENDANCIES
+#INSTALLED DEPENDANCIES
 sudo dnf groupinstall "C Development Tools and Libraries"
 sudo dnf install zlib-devel libuuid-devel libattr-devel libblkid-devel libselinux-devel libudev-devel
 sudo dnf install parted lsscsi ksh openssl-devel elfutils-libelf-devel libtirpc-devel
